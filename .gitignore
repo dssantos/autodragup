@@ -1,0 +1,9 @@
+
+.autodragup/
+.env
+*.sqlite3
+*.pyc
+__pycache__
+staticfiles
+.vscode
+

@@ -6,12 +6,18 @@ import pyautogui as pg
 
 while True:
 
-    xstart=1100
-    ystart=450
-    sleep(randrange(30,50))
+    xstart = 1150
+    ystart = 495
+    longwait = randrange(6,19)
+    shortwait = uniform(0.6, 0.9)
 
-    pg.moveTo(xstart+randrange(-50, 50), ystart+randrange(-50, 50))
-    pg.drag(0, -200, duration=uniform(0.1, 0.4))
+    sleep(longwait)
 
+    if longwait >= 10:
+        pg.moveTo(1347, 447)
+        pg.click()
+        sleep(shortwait-0.4)        
 
-
+    pg.moveTo(xstart+randrange(-10, 10), ystart+randrange(-2, 2))
+    sleep(shortwait)
+    pg.drag(0, -420, duration=shortwait)
